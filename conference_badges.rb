@@ -4,13 +4,13 @@ def badge_maker(name)
 end
 
 
-def batch_badge_creator(guest_list)
+def batch_badge_creator(speakers)
   guest_list.collect do |name|
     badge_maker(name)
 end
   end
 
-def assign_rooms(guest_list)
+def assign_rooms(speakers)
   room = 0
   guest_list.collect do |name|
     room+=1
@@ -19,11 +19,11 @@ def assign_rooms(guest_list)
 end
 
 
-def printer(guest_list)
-  batch_badge_creator(guest_list).each do |value|
+def printer(speakers)
+  batch_badge_creator(speakers).each do |value|
     puts value
   end
-  assign_rooms(guest_list).each do |value|
+  assign_rooms(speakers).each do |value|
     puts value
   end
 end
