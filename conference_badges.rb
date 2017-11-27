@@ -17,3 +17,13 @@ def assign_rooms(guest_list)
     "Hello, #{name}! You'll be assigned to room #{room}!"
   end
 end
+
+
+def printer(guest_list)
+  batch_badge_creator(guest_list).each do |value|
+    puts value
+  end
+  assign_rooms(guest_list).each do |value|
+    puts value
+  end
+end
